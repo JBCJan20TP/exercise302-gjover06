@@ -13,7 +13,7 @@
     <span th:if="${#fields.hasErrors('title')}"
           th:errors="*{title}"></span><br />
     List :<input type="text" th:field="*{list}" />
-        <SPAN TH:IF="${#Fields.hasErrors('list')}"
+        <SPAN th:if="${#fields.hasErrors('list')}"
               th:errors="*list"></SPAN><br />
     Description :<textarea rows="3" th:field="*{description}" />
     <span th:if="${#fields.hasErrors('description')}"

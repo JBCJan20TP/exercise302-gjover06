@@ -6,8 +6,9 @@
 </head>
 <body>
 <a href="/add">Add a ToDoList</a><br />
-<div th:each="todolist : ${todolist}">
+<div th:each="todolist : ${listToDoLists}">
     <h4 th:inline="text">[[${todolist.title}]] @ [[${todolist.list}]]</h4>
     <p th:text="${todolist.description}"></p>
+</div>
 </body>
 </html>

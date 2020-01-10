@@ -17,7 +17,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String listToDoList(Model model){
-        model.addAttribute("todolist", listRepository.findAll());
+        model.addAttribute("listToDoLists", listRepository.findAll());
         return "list";
     }
     @GetMapping("/add")
