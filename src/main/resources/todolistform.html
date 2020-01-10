@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${todolist}"
+      method="post">
+    Title :<input type="text" th:field="*{title}" />
+    <span th:if="${#fields.hasErrors('title')}"
+          th:errors="*{title}"></span><br />
+    List :<input type="text" th:field="*{list}" />
+        <SPAN TH:IF="${#Fields.hasErrors('list')}"
+              th:errors="*list"></SPAN><br />
+    Description :<textarea rows="3" th:field="*{description}" />
+    <span th:if="${#fields.hasErrors('description')}"
+          th:errors="*{description}"></span>
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
